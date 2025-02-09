@@ -1,10 +1,3 @@
-//
-//  README.md
-//  SpotLabsIOS
-//
-//  Created by Matan Dahan on 09/02/2025.
-//
-
 # SpotLabs iOS Assignment
 
 This project is a simple cryptocurrency token listing app built with **SwiftUI**. It displays token names, prices, and logos fetched from an API, using a custom image caching mechanism to improve performance.
