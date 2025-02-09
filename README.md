@@ -8,6 +8,7 @@ This project is a simple cryptocurrency token listing app built with **SwiftUI**
 - Fetches token data via an API and displays it in a scrollable list.
 - Caches images using a custom `CachedAsyncImage` to minimize network requests.
 - Handles loading states and shows a placeholder when images are unavailable.
+- Error handling with a retry mechanism in case the API request fails.
 
 ---
 

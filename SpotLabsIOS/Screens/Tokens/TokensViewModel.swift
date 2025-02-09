@@ -10,6 +10,9 @@ import Foundation
 @MainActor
 final class TokensViewModel: ObservableObject {
     @Published var tokens: [Token] = []
+    @Published var errorMessage: String = ""
+    @Published var isErrorPresented = false
+    
     private let apiClient: APIClient
     
     init(apiClient: APIClient) {
@@ -20,9 +23,9 @@ final class TokensViewModel: ObservableObject {
         do {
             let result = try await apiClient.getTokens()
             self.tokens = result
-            print(result)
         } catch {
-            print("Failed to fetch tokens: \(error)")
+            self.errorMessage = "Failed to load tokens. Please check your network connection or try again later."
+            isErrorPresented = true
         }
     }
 }
